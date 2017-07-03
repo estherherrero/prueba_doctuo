@@ -1,5 +1,7 @@
 <?php
 
+use App\Person;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,13 +14,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $personas = Person::all();
+    return view('welcome', ['personas' => $personas]);
 });
 
 Route::group(['middleware' => ['web']], function () {
     Route::get('/users', 'PersonController@get');
 	Route::get('/users/{id}', 'PersonController@getById');
 	Route::post('/users', 'PersonController@create');
+    Route::get('/users/{id}/afinidad', 'RequestController@afinidad');    
 });
 
 

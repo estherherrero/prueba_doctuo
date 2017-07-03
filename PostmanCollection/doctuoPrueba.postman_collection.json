@@ -1,0 +1,202 @@
+{
+	"variables": [],
+	"info": {
+		"name": "doctuoPrueba",
+		"_postman_id": "8325decc-fe51-28b3-d1cf-2d5f5b2a4498",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUserById",
+			"request": {
+				"url": "http://localhost/prueba_doctuo/public/users/34",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZXN0aGVyOg==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Esther\",\"firstSurname\":\"Herrero\",\"secondSurname\":\"Guzmán\", \"age\":28, \"gender\":\"Female\",\"hobbies\":[\"leer\", \"gatos\",\"series scfi\"]}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUserByAge",
+			"request": {
+				"url": {
+					"raw": "http://localhost/prueba_doctuo/public/users?age=28",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prueba_doctuo",
+						"public",
+						"users"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "28",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZXN0aGVyOg==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Esther\",\"firstSurname\":\"Herrero\",\"secondSurname\":\"Guzmán\", \"age\":28, \"gender\":\"Female\",\"hobbies\":[\"leer\", \"gatos\",\"series scfi\"]}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUserByAgeAndGender",
+			"request": {
+				"url": {
+					"raw": "http://localhost/prueba_doctuo/public/users?age=28&gender=female",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prueba_doctuo",
+						"public",
+						"users"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "28",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "gender",
+							"value": "female",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZXN0aGVyOg==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Esther\",\"firstSurname\":\"Herrero\",\"secondSurname\":\"Guzmán\", \"age\":28, \"gender\":\"Female\",\"hobbies\":[\"leer\", \"gatos\",\"series scfi\"]}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getUserByGender",
+			"request": {
+				"url": {
+					"raw": "http://localhost/prueba_doctuo/public/users?gender=female",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"prueba_doctuo",
+						"public",
+						"users"
+					],
+					"query": [
+						{
+							"key": "gender",
+							"value": "female",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZXN0aGVyOg==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Esther\",\"firstSurname\":\"Herrero\",\"secondSurname\":\"Guzmán\", \"age\":28, \"gender\":\"Female\",\"hobbies\":[\"leer\", \"gatos\",\"series scfi\"]}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "setUser",
+			"request": {
+				"url": "http://localhost/prueba_doctuo/public/users",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZXN0aGVyOg==",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"Esther\",\"firstSurname\":\"Herrero\",\"secondSurname\":\"Guzmán\", \"age\":28, \"gender\":\"female\",\"hobbies\":[\"leer\", \"gatos\",\"series scfi\"]}\r\n"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
